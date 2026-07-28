@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("FBNucleusChevronDownFilled16Icon.react",["react"],(function(t,n,r,o,a,i,l){"use strict";var e,s=e||(e=o("react"));function u(e){return s.jsxs("svg",babelHelpers.extends({viewBox:"0 0 16 16",width:"1em",height:"1em",fill:"currentColor"},e,{children:[e.title!=null&&s.jsx("title",{children:e.title}),e.children!=null&&s.jsx("defs",{children:e.children}),s.jsx("path",{d:"M6.94 10.354a1.5 1.5 0 0 0 2.12 0l2.647-2.647a1 1 0 0 0-1.414-1.414L8 8.586 5.707 6.293a1 1 0 0 0-1.414 1.414l2.646 2.647z"})]}))}u.displayName=u.name+" [from "+i.id+"]",u._size=16,u._isSVG=!0;var c=u;l.default=c}),98);

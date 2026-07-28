@@ -1,0 +1,350 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.controls input[type="text"],
+.controls input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+.board-select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 150px;
+}
+
+.board-select-container select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 100px; /* Adjust as needed */
+}
+
+.board-select-container button {
+    padding: 8px 12px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.board-select-container button:hover {
+    background-color: #4cae4c;
+}
+
+
+.controls button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+.custom-css-section {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+#customCssEditor {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 10px;
+}
+
+.custom-css-section button {
+    padding: 8px 12px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.custom-css-section button:hover {
+    background-color: #5a6268;
+}
+
+.results-container {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+#resultsHeader {
+    color: #007bff;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fdfdfd;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+#coOccurrencesList {
+    list-style: decimal;
+    padding-left: 20px;
+}
+
+#coOccurrencesList li {
+    margin-bottom: 5px;
+}
+/* 
+.chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+} */
+
+.chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+    /* NEW: constrain height */
+    max-height: 70vh !important;       /* never taller than 70% of screen height */
+    overflow-y: auto;       /* scroll if content overflows */
+}
+
+#monthlyChart {
+  max-height: 400px !important;
+  height: 400px !important;
+}
+
+
+.chart-container canvas {
+    width: 100% !important;  /* fill container width */
+    height: 400px !important; /* fixed readable height */
+    max-height: 60vh !important; /* optional: prevent extreme height */
+}
+
+
+.post-snippet {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.post-snippet strong {
+    color: #333;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.image-item {
+    width: 150px; /* Fixed width for consistency */
+    height: 150px; /* Fixed height to make it square */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide parts of image that exceed bounds */
+    background-color: #eee;
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+    word-break: break-all; /* For long filenames */
+}
+
+.image-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the whole image is visible without cropping */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Add to your existing style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    align-items: flex-end; /* Align items at the bottom */
+}
+
+.controls input[type="text"],
+.controls input[type="date"],
+.controls select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    flex-grow: 1; /* Allow inputs to grow */
+    min-width: 150px; /* Minimum width for inputs */
+}
+
+.controls button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+.board-select-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2; /* Allow it to take more space */
+    min-width: 200px;
+}
+
+.board-select-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.board-select-container select {
+    flex-grow: 1; /* Allow select to grow */
+    height: 120px; /* Adjust height as needed for multiple selection */
+}
+
+/* Results Section Styling */
+#results {
+    display: none; /* Hide until search is performed */
+    margin-top: 20px;
+}
+
+.results-container h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.results-container h3 {
+    color: #555;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 5px;
+}
+
+.results-container p {
+    line-height: 1.6;
+}
+
+.results-container ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+
+.results-container li {
+    margin-bottom: 5px;
+}
+
+/* Chart container styling - keep your responsive height/width here */
+.chart-container {
+    position: relative;
+    margin: 15px 0;
+    height: 65vh; /* Adjust as needed */
+    max-width: 100%; /* Ensure it doesn't overflow */
+}

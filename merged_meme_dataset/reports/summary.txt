@@ -1,0 +1,18 @@
+Total images indexed in glossary: 893
+Total images copied into merged_images: 893
+
+Images per macro category:
+  imageboard: 642
+  social_media_platforms: 226
+  subcultural_vernacular: 25
+
+Images per specific source:
+  4plebs: 642
+  fb_Pinochets_Free_Helicopter Rides: 42
+  fb_general_pinochet_free_helicopter_rides: 12
+  memedroid: 18
+  reddit: 7
+  fb_minarchismo_pinochetiano: 137
+  imgur_pinochet_fb_page: 10
+  mammoth_blogpost: 9
+  kym_free_helicopter_rides: 16

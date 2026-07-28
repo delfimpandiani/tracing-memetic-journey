@@ -1,0 +1,163 @@
+/* Force Report Ad Link to be Below Content - In_content*/
+[id^="adl_in_content"] > .adl-report-ad-container {
+     position: absolute !important;
+     bottom: -325px !important;
+     padding-bottom: 5px !important;
+}
+
+/* Force position Relative to fix Report Ad Link layout issue - IAB  */
+[id^="standard_iab_rght"] {
+      position: relative !important;
+}
+
+/* Force Report Ad Link to be Below Content - IAB  */
+[id^="standard_iab_head"]  .pw_report_ad_container, [id^="standard_iab_rght"]  .pw_report_ad_container {
+     position: absolute !important;
+     bottom: -5px !important;
+     width: 100%;
+     padding-top: 5px !important;
+}
+
+/* Force Report Ad Link to be centered - Bottom Rail  */
+#pw-oop-bottom_rail > .pw_report_ad_container {
+    text-align: center !important;
+}
+
+/* Modify Bottom Rail Max-height to avoid mobile Report Ad Link from pushing bottom rail down  */
+@media (max-width: 768px) {
+  #pw-oop-bottom_rail {
+    max-height: 100px !important;
+  }
+}
+
+/* Unset Margin moving incontent unit to the left. */
+.pw-ad-scroll-container.pw-clearfix {
+    margin: unset !important;
+}
+
+/* Reduce in_content scroll container size*/
+.pw-ad-scroll-container {
+   min-height: 350px !important;
+}
+
+/* Reduce in_content scroll container size - Mobile*/
+@media (max-width: 767px) {
+  /*Push mobile in-contents below their topdock video*/
+  .pw-ad-scroll-container .pw-sticky,
+  .pw-ad-scroll-container .incontent-element {
+    top: 190px!important;
+  }
+
+	.pw-ad-scroll-container {
+		min-height: 325px !important;
+	}
+
+	div[id^="in_content"] {
+		top: 113px !important;
+	}
+
+       body:has(.ac-floated-player) div[id^="in_content"] {
+              top: 235px !important;
+       }
+
+	[id^="adl_in_content"] > .adl-report-ad-container {
+		position: absolute !important;
+		bottom: -305px !important;
+		padding-bottom: 5px !important;
+	}
+}
+
+/* Reduce in_content scroll container size*/
+.pw-ad-scroll-container {
+   min-height: 300px !important;
+}
+
+/* Unset Overflow to allow in_content sticky behavior */
+.contents-container > .contents {
+     overflow: unset !important;
+} 
+
+/* Unset overflow to allow sticky behavior on in_contents */
+.pw-ad {
+     overflow: unset !important;
+}
+
+/* Unset Overflow to allow in_content sticky behavior  - mobile*/
+@media screen and (max-width: 768px) {
+    main {
+        overflow-x: unset !important;
+    }
+}
+
+/* unset Sticky behavior to allow sticky sidebar to work */
+div.sticky-sidebar:not(body > main > aside:nth-child(14) > div), .sidebar.extra-large-only div.sticky  {
+     position: unset !important;
+}
+
+/* Modify Container Height to avoid unit overflowing */
+aside .ad-unit-wrapper .pw-ad  {
+    height: unset !important;
+    min-height: 620px !important;
+}
+
+/*970px is the min width that screen size must be for backgrounds to show*/
+@media only screen and (min-width: 970px) {
+  /*FLEX SKINS START*/
+  body.flex-skin-active main,
+  body.flex-skin-docked main,
+  body.flex-skin-active .footer,
+  body.flex-skin-docked .footer {
+    background: #fff;
+    width: 1100px;
+    margin: auto;
+  }
+
+  body.flex-skin-active #header,
+  body.flex-skin-docked #header {
+    width: 1100px;
+    margin: auto;
+  }
+
+  body.flex-skin-active nav,
+  body.flex-skin-docked nav {
+      background: #12143C;
+      top: 100px !important;
+   }
+
+  body.flex-skin-active .drop-down-content-width.open {
+          top: 413px !important;
+   }
+
+  body.flex-skin-docked .drop-down-content-width.open {
+          top: 163px !important;
+   }
+}
+
+/*Breakpoint for smaller breakpoints with different nav*/
+
+@media only screen and (max-width: 969px) {
+
+}
+
+/*Example Breakpoint for mobile breakpoint (may fall into the above)*/
+
+@media only screen and (max-width: 600px) {
+  body.flex-skin-active nav,
+  body.flex-skin-docked nav {
+      top: 70px !important;
+   }
+
+  body.flex-skin-active .mobile-nav.open {
+        top: 210px !important;
+   }
+
+  body.flex-skin-docked .mobile-nav.open {
+        top: 70px !important;
+   }
+
+  body.flex-skin-docked [id^="primis_playerSekindoSPlayer"] {
+         top: 134px !important;
+   }
+}
+
+/*FLEX SKINS END*/

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Data Explorer</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <!-- Chart.js DataZoom plugin for better temporal navigation on dense charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.js"></script>
+    <!-- <script src="static/js/script.js"></script> -->
+</head>
+<body>
+    <header>
+        <h1>Forum Data Explorer</h1>
+    </header>
+
+    <main>
+        <div class="controls">
+            <input type="text" id="queryInput" placeholder="Enter query term (e.g., 'pinochet')">
+            <input type="date" id="startDate" title="Start Date">
+            <input type="date" id="endDate" title="End Date">
+            <div class="board-select-container">
+                <label for="boardSelect">Select Boards:</label>
+                <!-- Use multiple select to allow selecting several board/platform combinations -->
+                <select id="boardSelect" multiple size="5">
+                    <!-- Options will be loaded by JavaScript in script.js now -->
+                </select>
+                <button onclick="selectAllBoards()">Select All</button>
+                <button onclick="clearSelectedBoards()">Clear Selection</button>
+            </div>
+
+            <button onclick="searchData()">Search</button>
+        </div>
+
+        <div id="results" class="results-container">
+            <h2 id="resultsHeader"></h2>
+
+            <div id="summary">
+                <h3>Quantitative Overview</h3>
+                <p>Total Mentions: <span id="totalMentions">0</span></p>
+                <p>Posts with Images: <span id="postsWithImages">0</span> (<span id="percentageWithImages">0</span>%)</p>
+            </div>
+
+            <div id="coOccurrencesSection">
+                <h3>Top Co-occurring Phrases</h3>
+                <ul id="coOccurrencesList"></ul>
+                <div id="coOccurrencesOverTime"></div>
+            </div>
+
+            <div id="wordCloudSection">
+                <h3>Word Cloud of Co-occurring Phrases</h3>
+                <canvas id="wordCloudCanvas" width="600" height="400"></canvas>
+            </div>
+            
+            <div id="temporalSection">
+                <h3>Temporal Distribution</h3>
+
+                <div class="chart-options">
+                    <label>
+                        <input type="checkbox" id="showTotalPostsToggle" onchange="toggleTotalPosts()"> Show Total Posts
+                    </label>
+                    <label>
+                        <input type="checkbox" id="showPercentageToggle" onchange="togglePercentage()"> Show Percentage
+                    </label>
+                </div
+
+
+
+
+
+                <div class="chart-container">
+                    <h4>Overall Monthly Mentions</h4>
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h4>Overall Yearly Mentions</h4>
+                    <canvas id="yearlyChart"></canvas>
+                </div>
+                <div id="boardSpecificCharts">
+                    <h4>Board Specific Monthly Mentions</h4>
+                    <!-- Board-specific charts will be dynamically injected here -->
+                </div>
+            </div>
+
+            <div id="imageAnalysisSection">
+                <h3>Images Attached to Posts</h3>
+                <div id="imageGallery" class="image-gallery">
+                    <!-- Image filenames/URLs will be displayed here -->
+                </div>
+            </div>
+
+            <div id="qualitativeSection">
+                <h3>Qualitative Snippets (First 10 Posts)</h3>
+                <div id="postSnippets">
+                    <!-- Post snippets will be injected here -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Forum Data Explorer</p>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
