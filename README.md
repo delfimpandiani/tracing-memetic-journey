@@ -102,7 +102,7 @@ If interested, please contact: **d.s.martinezpandiani@uva.nl**.
 If you build on this work, please cite the repository:
 
 ```
-@misc{martinezpandiani_fhr_repo,
+@misc{martinezpandiani2026tracingrepo,
   author       = {Delfi Sol Martinez Pandiani},
   title        = {Tracing a Memetic Journey (GitHub Repository)},
   year         = {2026},
@@ -114,7 +114,7 @@ If you build on this work, please cite the repository:
 and the article associated with this repository:
 
 ```
-@article{pandiani2025tracing,
+@article{martinezpandiani2026tracingmemetic,
   title={Tracing a Memetic Journey: From South American Death Flights to Free Helicopter Ride Memes},
   author={Martinez Pandiani, Delfi Sol},
   journal={AoIR Selected Papers of Internet Research},
