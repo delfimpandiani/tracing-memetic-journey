@@ -5,3 +5,7 @@ merged_meme_dataset/merged_images/
 _news_media/**/*_files/
 _social_media_platforms/**/*_files/
 _subcultural_vernacular/**/*_files/
+_news_media/**/*.bak
+_social_media_platforms/**/*.bak
+_subcultural_vernacular/**/*.bak
+redact_htmls.py
