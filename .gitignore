@@ -2,3 +2,9 @@
 _imageboard/imageboard_text_data/
 merged_meme_dataset/meme_glossary.csv
 merged_meme_dataset/merged_images/
+_news_media/**
+_social_media_platforms/**
+_subcultural_vernacular/**
+!_news_media/**/*.html
+!_social_media_platforms/**/*.html
+!_subcultural_vernacular/**/*.html
